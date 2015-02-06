@@ -1,5 +1,6 @@
 package maxtemperature;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.apache.hadoop.io.IntWritable;
@@ -13,12 +14,13 @@ public class MaxTemperatureMapperTest {
 
 	@Test
 	public void processesValidRecord() throws IOException, InterruptedException {
+		System.getProperties().put("hadoop.home.dir", new File("src/main").getAbsolutePath());
 		Text value = new Text("0043011990999991950051518004+68750+023550FM-12+0382" +
 								"99999V0203201N00261220001CN9999999N9-00111+99999999999");
 
 		new MapDriver<LongWritable, Text, Text, IntWritable>()
 			.withMapper(new MaxTemperatureMapper())
-			.withInputValue(value)
+			.withInput(new LongWritable(), value)
 			.withOutput(new Text("1950"), new IntWritable(-11))
 			.runTest();
 	}
