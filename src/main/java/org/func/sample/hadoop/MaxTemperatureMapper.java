@@ -16,7 +16,14 @@ public class MaxTemperatureMapper extends
 
 		String line = value.toString();
 		String year =line.substring(15, 19);
-		int airTemperature = Integer.parseInt(line.substring(87,92));
-		context.write(new Text(year), new IntWritable(airTemperature));
+		String temp = line.substring(87, 92);
+		if (!missing(temp)) {
+			int airTemperature = Integer.parseInt(temp);
+			context.write(new Text(year), new IntWritable(airTemperature));
+		}
+	}
+
+	private boolean missing(String temp) {
+		return temp.equals("+9999");
 	}
 }
