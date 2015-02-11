@@ -13,27 +13,27 @@
   </property>
   <property>
     <name>yarn.resourcemanager.address</name>
-    <value>192.168.0.15:8032</value>
+    <value>192.168.0.2:8032</value>
   </property>
   <property>
     <name>yarn.resourcemanager.admin.address</name>
-    <value>192.168.0.15:8033</value>
+    <value>192.168.0.2:8033</value>
   </property>
   <property>
     <name>yarn.resourcemanager.scheduler.address</name>
-    <value>192.168.0.15:8030</value>
+    <value>192.168.0.2:8030</value>
   </property>
   <property>
     <name>yarn.resourcemanager.resource-tracker.address</name>
-    <value>192.168.0.15:8031</value>
+    <value>192.168.0.2:8031</value>
   </property>
   <property>
     <name>yarn.resourcemanager.webapp.address</name>
-    <value>192.168.0.15:8088</value>
+    <value>192.168.0.2:8088</value>
   </property>
   <property>
     <name>yarn.resourcemanager.webapp.https.address</name>
-    <value>192.168.0.15:8090</value>
+    <value>192.168.0.2:8090</value>
   </property>
   <property>
     <name>yarn.resourcemanager.client.thread-count</name>
