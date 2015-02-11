@@ -3,7 +3,7 @@ package org.func.sample.hadoop;
 import org.apache.hadoop.util.ToolRunner;
 
 
-public class MaxTemperature {
+public class MaxTemperatureConfig {
 
 	/*
 	public static void main(String[] args) {
