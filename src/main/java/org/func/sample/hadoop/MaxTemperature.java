@@ -30,6 +30,7 @@ public class MaxTemperature extends Configured implements Tool {
 		FileOutputFormat.setOutputPath(job,  new Path(args[1]));
 
 		job.setMapperClass(MaxTemperatureMapper.class);
+		job.setCombinerClass(MaxTemperatureReducer.class);
 		job.setReducerClass(MaxTemperatureReducer.class);
 
 		job.setOutputKeyClass(Text.class);
