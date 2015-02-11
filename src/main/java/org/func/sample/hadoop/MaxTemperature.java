@@ -12,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-public class MaxTemperatureDriver extends Configured implements Tool {
+public class MaxTemperature extends Configured implements Tool {
 
 	public int run(String[] args) throws Exception {
 		if (args.length != 2) {
@@ -40,7 +40,7 @@ public class MaxTemperatureDriver extends Configured implements Tool {
 
 	public static void main(String[] args) throws Exception {
 		System.getProperties().put("hadoop.home.dir", new File("src/main").getAbsolutePath());
-		int exitCode = ToolRunner.run(new MaxTemperatureDriver(), args);
+		int exitCode = ToolRunner.run(new MaxTemperature(), args);
 		System.exit(exitCode);
 	}
 
