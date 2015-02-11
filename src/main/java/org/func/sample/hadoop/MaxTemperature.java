@@ -22,14 +22,14 @@ public class MaxTemperature extends Configured implements Tool {
 			return -1;
 		}
 
-		Job job = new Job(getConf(), "Max temperature");
+		Job job = new Job();
 		job.setJarByClass(getClass());
+		job.setJobName("Max temperature");
 
 		FileInputFormat.addInputPath(job,  new Path(args[0]));
 		FileOutputFormat.setOutputPath(job,  new Path(args[1]));
 
 		job.setMapperClass(MaxTemperatureMapper.class);
-		job.setCombinerClass(MaxTemperatureReducer.class);
 		job.setReducerClass(MaxTemperatureReducer.class);
 
 		job.setOutputKeyClass(Text.class);
