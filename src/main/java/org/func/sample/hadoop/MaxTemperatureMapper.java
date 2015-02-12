@@ -30,7 +30,4 @@ public class MaxTemperatureMapper extends
 		}
 	}
 
-	private boolean missing(String temp) {
-		return temp.equals("+9999");
-	}
 }
