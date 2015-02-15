@@ -25,10 +25,10 @@
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
           <reportPlugins>
-            <plugin> 
+            <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-checkstyle-plugin</artifactId>
-            </plugin> 
+            </plugin>
           </reportPlugins>
         </configuration>
       </plugin>
@@ -68,6 +68,13 @@
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>jdk.tools</groupId>
+      <artifactId>jdk.tools</artifactId>
+      <version>1.6.0</version>
+      <scope>system</scope>
+      <systemPath>${java.home}/lib/tools.jar</systemPath>
     </dependency>
   </dependencies>
 </project>
